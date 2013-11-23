@@ -45,9 +45,15 @@ Game = Class.create(Core,{
         this.players = new Players();
         this.players.shuffleTurnOwner();
 
-        // TODO: 書き方変えたい
-        this.rootScene.addChild(this.players.me.handCardMain.handCardGroup);
+        // TODO: 書き方変えたい、値は定数化
         this.rootScene.addChild(this.players.enemy.handCardMain.handCardGroup);
+        this.players.enemy.handCardMain.handCardGroup.x = 0;
+        this.players.enemy.handCardMain.handCardGroup.y = 0;
+        this.players.enemy.handCardMain.handCardGroup.adjustCardsPosition();
+        this.rootScene.addChild(this.players.me.handCardMain.handCardGroup);
+        this.players.me.handCardMain.handCardGroup.x = 0;
+        this.players.me.handCardMain.handCardGroup.y = 400;
+        this.players.me.handCardMain.handCardGroup.adjustCardsPosition();
 
         this.state = Game.STATE_INIT;
     },
