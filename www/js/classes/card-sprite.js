@@ -1,5 +1,5 @@
 // TODO:
-// 
+// たくさん情報表示するからSpriteじゃなくてGroupにする
 
 CardSprite = Class.create(Sprite, {
     cardMain: null,
