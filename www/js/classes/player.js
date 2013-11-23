@@ -1,5 +1,5 @@
 // TODO:
-// 手札配る
+// 山札作ってそこからカード引くようにする
 
 Player = Class.create(Group, {
     type: 0,
@@ -8,6 +8,12 @@ Player = Class.create(Group, {
         Group.call(this);
         this.type = type;
         this.handCardMain = new HandCardMain(this);
+
+        this.drawCard();
+        this.drawCard();
+        this.drawCard();
+        this.drawCard();
+        this.drawCard();
     },
 
     drawCard: function() {
