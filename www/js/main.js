@@ -1,5 +1,3 @@
-enchant();
-
 function callinit() {
     if(getUa() === false) init();
     else document.addEventListener("deviceready", init, false);
