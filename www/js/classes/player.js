@@ -3,9 +3,11 @@
 
 Player = Class.create(Group, {
     type: 0,
+    handCardMain: null,
     initialize: function(type) {
         Group.call(this);
         this.type = type;
+        this.handCardMain = new HandCardMain();
     }
 });
 
