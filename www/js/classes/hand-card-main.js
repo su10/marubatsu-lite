@@ -14,7 +14,7 @@ HandCardMain = Class.create(Object, {
     },
 
     addCard: function(card) {
-        if(card instanceof Card) {
+        if(card instanceof CardMain) {
             this.cards.push(card);
             this.handCardGroup.addCard(card.cardSprite);
         } else {
