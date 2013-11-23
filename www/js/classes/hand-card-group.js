@@ -1,5 +1,6 @@
 // TODO:
 // add,remove後の全部のカード位置調整
+// 手札の枚数で位置をぴったりにする
 
 HandCardGroup = Class.create(Group, {
     handCardMain: null,

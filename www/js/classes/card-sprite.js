@@ -11,6 +11,7 @@ CardSprite = Class.create(Sprite, {
         var s = new Surface(CardSprite.WIDTH, CardSprite.HEIGHT);
         var c = s.context;
         c.fillStyle = "green";
+        c.strokeStyle = "black";
         c.lineWidth = 1;
         
         var x = 0;
@@ -31,6 +32,7 @@ CardSprite = Class.create(Sprite, {
         c.lineTo(x,y+r);
         c.arcTo(x,y,x+r,y,r);
         c.fill();
+        c.stroke();
         
         this.image = s;
     }
