@@ -6,5 +6,6 @@ CardMain = Class.create(Group, {
     cardSprite: null,
     initialize: function() {
         Group.call(this);
+        this.cardSprite = new CardSprite(this);
     }
 });
