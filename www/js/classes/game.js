@@ -38,6 +38,10 @@ Game = Class.create(Core,{
         this.fpsLabel.width = 240;
         
         this.scale = Game.DEFAULT_SCALE;
+
+        this.players = new Players();
+        this.players.shuffleTurnOwner();
+
         this.state = Game.STATE_INIT;
     },
     

@@ -6,7 +6,6 @@ Player = Class.create(Group, {
     initialize: function(type) {
         Group.call(this);
         this.type = type;
-        
     }
 });
 
