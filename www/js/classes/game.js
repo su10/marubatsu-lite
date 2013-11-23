@@ -1,3 +1,6 @@
+// TODO:
+// 手札をrootSceneにaddする書き方変える
+
 Game = Class.create(Core,{
     fps: Settings.FPS,
     fpsLabel: null,
@@ -41,6 +44,10 @@ Game = Class.create(Core,{
 
         this.players = new Players();
         this.players.shuffleTurnOwner();
+
+        // TODO: 書き方変えたい
+        this.rootScene.addChild(this.players.me.handCardMain.handCardGroup);
+        this.rootScene.addChild(this.players.enemy.handCardMain.handCardGroup);
 
         this.state = Game.STATE_INIT;
     },
