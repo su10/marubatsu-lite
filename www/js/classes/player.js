@@ -7,7 +7,11 @@ Player = Class.create(Group, {
     initialize: function(type) {
         Group.call(this);
         this.type = type;
-        this.handCardMain = new HandCardMain();
+        this.handCardMain = new HandCardMain(this);
+    },
+
+    drawCard: function() {
+        this.handCardMain.addCard(new CardMain());
     }
 });
 

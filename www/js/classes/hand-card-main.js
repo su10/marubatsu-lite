@@ -3,12 +3,14 @@
 // IE6~8で動かないけどgetter使いたい
 
 HandCardMain = Class.create(Object, {
+    player: null,
     cards: null,
     handCardGroup: null,
 
-    initialize: function() {
+    initialize: function(player) {
+        this.player = player;
         this.cards = [];
-        this.handCardGroup = new HandCardGroup(this);
+        this.handCardGroup = new HandCardGroup();
     },
 
     addCard: function(card) {

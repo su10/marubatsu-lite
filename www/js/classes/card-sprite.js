@@ -2,8 +2,11 @@
 // 
 
 CardSprite = Class.create(Sprite, {
-    initialize: function() {
+    cardMain: null,
+
+    initialize: function(cardMain) {
         Sprite.call(this, CardSprite.WIDTH, CardSprite.HEIGHT);
+        this.cardMain = cardMain;
         
         var s = new Surface(CardSprite.WIDTH, CardSprite.HEIGHT);
         var c = s.context;
