@@ -1,4 +1,6 @@
 # ○×ゲーム
+## 始め方
+www/index.htmlを開く
 
 ## 命名規則
 * JavaScriptのファイル名は
