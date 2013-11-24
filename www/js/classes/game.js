@@ -53,7 +53,7 @@ Game = Class.create(Core,{
     onload: function() {
         this.resetPanels();
 
-        // // fps表示
+        // fps表示
         if(Settings.DEBUG) {
             this.fpsLabel = new FpsLabel();
             this.rootScene.addChild(this.fpsLabel);
