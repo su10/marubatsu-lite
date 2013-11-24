@@ -57,7 +57,7 @@ Game = Class.create(Core,{
         if(Settings.DEBUG) {
             this.fpsLabel = new FpsLabel();
             this.rootScene.addChild(this.fpsLabel);
-            setInterval(function() { this.fpsLabel.update(this); }.bind(this), 1000);
+            setInterval(function() { this.fpsLabel.update(this.frame); }.bind(this), 1000);
         }
 
         // Main loop

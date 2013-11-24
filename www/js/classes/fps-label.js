@@ -2,7 +2,7 @@
 //
 
 FpsLabel = Class.create(Label, {
-    oldFrameCount: 0,
+    oldFrame: 0,
 
     initialize: function() {
         Label.call(this);
@@ -15,8 +15,8 @@ FpsLabel = Class.create(Label, {
         this.y = 5;
     },
 
-    update: function(game) {
-        this.text = (game.frame - this.oldFrameCount) + ' fps';
-        this.oldFrameCount = game.frame;
+    update: function(currentFrame) {
+        this.text = (currentFrame - this.oldFrame) + ' fps';
+        this.oldFrame = currentFrame;
     }
 });
