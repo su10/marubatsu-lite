@@ -51,7 +51,7 @@ Game = Class.create(Core,{
 
     // assets読み込み完了後の処理
     onload: function() {
-        this.resetPanels();
+        this.reset();
 
         // fps表示
         if(Settings.DEBUG) {
@@ -62,6 +62,10 @@ Game = Class.create(Core,{
 
         // Main loop
         this.rootScene.addEventListener(Event.ENTER_FRAME, this.onEnterFrame.bind(this));
+    },
+
+    reset: function() {
+        this.resetPanels();
     },
 
     resetPanels: function() {

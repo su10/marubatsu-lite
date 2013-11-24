@@ -15,6 +15,6 @@ function init() {
 
 function reset() {
     game.pause();
-    game.resetPanels();
+    game.reset();
     game.resume();
 }
