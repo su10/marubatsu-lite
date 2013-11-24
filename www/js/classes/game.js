@@ -57,22 +57,11 @@ Game = Class.create(Core,{
         if(Settings.DEBUG) {
             this.fpsLabel = new FpsLabel();
             this.rootScene.addChild(this.fpsLabel);
-            this.updateFpsLabel();
-            setInterval(function() { this.updateFpsLabel(); }.bind(this), 1000);
+            setInterval(function() { this.fpsLabel.update(this); }.bind(this), 1000);
         }
 
         // Main loop
         this.rootScene.addEventListener(Event.ENTER_FRAME, this.onEnterFrame.bind(this));
-    },
-    
-    updateFpsLabel: function() {
-        if(!this.oldFrameCount) {
-            this.oldFrameCount = 0;
-        }
-        if(this.fpsLabel !== null) {
-            this.fpsLabel.text = (this.frame - this.oldFrameCount) + ' fps';
-            this.oldFrameCount = this.frame;
-        }
     },
 
     resetPanels: function() {
