@@ -57,6 +57,19 @@ Game = Class.create(Core,{
 
         this.state = Game.STATE_INIT;
     },
+
+    // assets読み込み完了後の処理
+    onload: function() {
+        this.resetPanels();
+
+        // // fps表示
+        this.rootScene.addChild(this.fpsLabel);
+        this.updateFpsLabel();
+        setInterval(function() { this.updateFpsLabel(); }.bind(this), 1000);
+
+        // Main loop
+        this.rootScene.addEventListener(Event.ENTER_FRAME, this.onEnterFrame.bind(this));
+    },
     
     updateFpsLabel: function() {
         if(!this.oldFrameCount) {
