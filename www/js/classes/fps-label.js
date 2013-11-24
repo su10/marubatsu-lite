@@ -9,6 +9,5 @@ FpsLabel = Class.create(Label, {
         this.textAlign = "left";
         this.x = 10;
         this.y = 5;
-        this.width = 100;
     }
 });
