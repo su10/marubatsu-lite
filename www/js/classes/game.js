@@ -63,9 +63,11 @@ Game = Class.create(Core,{
         this.resetPanels();
 
         // // fps表示
-        this.rootScene.addChild(this.fpsLabel);
-        this.updateFpsLabel();
-        setInterval(function() { this.updateFpsLabel(); }.bind(this), 1000);
+        if(Settings.DEBUG) {
+            this.rootScene.addChild(this.fpsLabel);
+            this.updateFpsLabel();
+            setInterval(function() { this.updateFpsLabel(); }.bind(this), 1000);
+        }
 
         // Main loop
         this.rootScene.addEventListener(Event.ENTER_FRAME, this.onEnterFrame.bind(this));

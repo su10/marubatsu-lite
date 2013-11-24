@@ -1,4 +1,5 @@
 Settings = {
+    DEBUG: true,
     FPS: 30,
     FONT: '18px/1.2 vt',
     MY_TURN: true,
