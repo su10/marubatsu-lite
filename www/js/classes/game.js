@@ -3,7 +3,6 @@
 
 Game = Class.create(Core,{
     fps: Settings.FPS,
-    fpsLabel: null,
     scale: 1,
     
     state: 0,
@@ -32,14 +31,6 @@ Game = Class.create(Core,{
         
         this.rootScene.backgroundColor = Game.BACKGROUND_COLOR;
         
-        this.fpsLabel = new Label();
-        this.fpsLabel.font = Settings.FONT;
-        this.fpsLabel.color = "white";
-        this.fpsLabel.textAlign = "left";
-        this.fpsLabel.x = 10;
-        this.fpsLabel.y = 5;
-        this.fpsLabel.width = 240;
-        
         this.scale = Game.DEFAULT_SCALE;
 
         this.players = new Players();
@@ -64,6 +55,7 @@ Game = Class.create(Core,{
 
         // // fps表示
         if(Settings.DEBUG) {
+            this.fpsLabel = new FpsLabel();
             this.rootScene.addChild(this.fpsLabel);
             this.updateFpsLabel();
             setInterval(function() { this.updateFpsLabel(); }.bind(this), 1000);
